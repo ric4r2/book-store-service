@@ -1,161 +1,276 @@
-# Book Store. Spring Project
+# 📚 Book Store Service
 
-The purpose of this task is to check your knowledge and understanding in Java and Spring.
+[![Build Status](https://github.com/yourusername/book-store-service/workflows/CI/badge.svg)](https://github.com/yourusername/book-store-service/actions)
+[![codecov](https://codecov.io/gh/yourusername/book-store-service/branch/main/graph/badge.svg)](https://codecov.io/gh/yourusername/book-store-service)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Java](https://img.shields.io/badge/Java-17-orange.svg)](https://www.oracle.com/java/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.3.0-brightgreen.svg)](https://spring.io/projects/spring-boot)
 
-Duration: **15** hours
+A professional, production-ready RESTful API for book store management built with Spring Boot 3, featuring JWT authentication, comprehensive API documentation, and modern DevOps practices.
 
-## Description
+## ✨ Features
 
-Your objective is to develop a "Book Store Service" following the MVC pattern.
+### Core Functionality
+- 📖 **Book Management** - CRUD operations for books with search and pagination
+- 👥 **User Management** - Separate client and employee roles with role-based access control
+- 🛒 **Order Management** - Complete order processing workflow
+- 🔐 **JWT Authentication** - Secure token-based authentication with refresh tokens
 
-> Project may have two main roles of authority: customer and employee.
+### Technical Highlights
+- **RESTful API** - Clean, versioned API design (`/api/v1/`)
+- **OpenAPI/Swagger** - Interactive API documentation
+- **Database Migration** - Flyway for version-controlled schema management
+- **Caching** - Caffeine cache for improved performance
+- **Soft Delete** - Non-destructive data removal
+- **Audit Fields** - Automatic tracking of created/updated timestamps
+- **Exception Handling** - Global exception handling with standardized error responses
+- **Validation** - Comprehensive input validation with Bean Validation
+- **Security** - Spring Security with JWT, CORS, and role-based authorization
+- **Observability** - Spring Boot Actuator with Prometheus metrics
+- **Docker Support** - Multi-stage Dockerfile and docker-compose for easy deployment
+- **CI/CD** - GitHub Actions pipeline for automated testing and quality checks
 
-The project structure is already set up, with essential classes waiting for implementation in their respective folders.
-Your project is organized into several packages. Here's a brief overview of each:
+## 🚀 Quick Start
 
-### Packages Overview
+### Prerequisites
+- Java 17 or higher
+- Maven 3.6+
+- PostgreSQL 12+ (or use Docker)
+- Docker & Docker Compose (optional, for containerized deployment)
 
-#### `conf`
+### Running with Docker (Recommended)
 
-- Houses all configuration classes.
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/book-store-service.git
+cd book-store-service
 
-#### `controller`
+# Start the application with Docker Compose
+docker-compose up -d
 
-- Contains controller files.
+# The API will be available at http://localhost:8080
+# Swagger UI: http://localhost:8080/swagger-ui.html
+```
 
-#### `dto`
+### Running Locally
 
-- Contains DTO files.
+1. **Set up PostgreSQL database**
+```bash
+createdb bookstore
+```
 
-#### `model`
+2. **Configure environment variables** (optional)
+```bash
+export DB_USERNAME=postgres
+export DB_PASSWORD=postgres
+export JWT_SECRET=your-secret-key-here
+```
 
-- Contains all model classes.
+3. **Build and run**
+```bash
+mvn clean install
+mvn spring-boot:run
+```
 
-#### `exception`
+The application will start on `http://localhost:8080`
 
-- Contains custom user exception files.
+## 📖 API Documentation
 
-#### `repo`
+### Swagger UI
+Access the interactive API documentation at: **http://localhost:8080/swagger-ui.html**
 
-- Contains repository files.
+### Sample Endpoints
 
-#### `service`
+#### Authentication
+```bash
+# Register a new client
+curl -X POST http://localhost:8080/api/v1/auth/register \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "John Doe",
+    "email": "john@example.com",
+    "password": "password123",
+    "phone": "+1234567890",
+    "address": "123 Main St"
+  }'
 
-- Includes interfaces with declared methods for all services.
+# Login
+curl -X POST http://localhost:8080/api/v1/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{
+    "email": "admin@bookstore.com",
+    "password": "password123"
+  }'
+```
 
-- `impl`: Encompasses implementations of declared services.
+#### Books
+```bash
+# Get all books (requires authentication)
+curl -X GET http://localhost:8080/api/v1/books \
+  -H "Authorization: Bearer YOUR_JWT_TOKEN"
 
-The class diagram of the Domain model is shown in the figure below:
+# Search books with pagination
+curl -X GET "http://localhost:8080/api/v1/books/search?search=gatsby&page=0&size=10" \
+  -H "Authorization: Bearer YOUR_JWT_TOKEN"
 
-<img src="img/Diagram.png" alt="DTO" width="1000"/>
+# Create a new book (requires EMPLOYEE role)
+curl -X POST http://localhost:8080/api/v1/books \
+  -H "Authorization: Bearer YOUR_JWT_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "New Book",
+    "author": "Author Name",
+    "price": 19.99,
+    "genre": "Fiction",
+    "ageGroup": "ADULT",
+    "language": "ENGLISH",
+    "pages": 300
+  }'
+```
 
-### Permissions
+### Default Users
 
-> For Any Registered Users
+The application comes with pre-configured users for testing:
 
-- Access a list of available books.
-- View detailed information about any book.
-- Edit personal information and view user profile.
+| Email | Password | Role |
+|-------|----------|------|
+| admin@bookstore.com | password123 | EMPLOYEE |
+| employee1@bookstore.com | password123 | EMPLOYEE |
+| client1@example.com | password123 | CLIENT |
+| client2@example.com | password123 | CLIENT |
 
-> For Employees
+## 🏗️ Architecture
 
-- Add, edit, or delete books from the list.
-- Confirm orders placed by customers.
-- Block or unblock customer accounts.
-- Access a list of registered customers.
+### Technology Stack
+- **Framework**: Spring Boot 3.3.0
+- **Language**: Java 17
+- **Database**: PostgreSQL (production), H2 (testing)
+- **ORM**: Spring Data JPA with Hibernate
+- **Security**: Spring Security with JWT
+- **Migration**: Flyway
+- **Caching**: Caffeine
+- **API Docs**: SpringDoc OpenAPI 3
+- **Build Tool**: Maven
+- **Containerization**: Docker
 
-> For Customers
+### Project Structure
+```
+src/main/java/com/bookstore/
+├── config/              # Configuration classes
+│   ├── SecurityConfig.java
+│   ├── OpenApiConfig.java
+│   ├── CacheConfig.java
+│   └── JpaConfig.java
+├── controller/          # REST controllers
+│   ├── AuthController.java
+│   └── BookController.java
+├── dto/                 # Data Transfer Objects
+│   ├── request/
+│   └── response/
+├── exception/           # Exception handling
+│   ├── GlobalExceptionHandler.java
+│   └── custom exceptions
+├── model/               # JPA entities
+│   ├── base/
+│   └── enums/
+├── repository/          # Spring Data repositories
+├── security/            # Security components
+│   └── jwt/
+└── service/             # Business logic
+```
 
-- Add books to the basket for purchase.
-- Delete their account.
-- Submit orders for purchase.
+## 🧪 Testing
 
-### Services
+```bash
+# Run all tests
+mvn test
 
-Below is a list of available services with corresponding methods for implementation.
+# Run tests with coverage
+mvn clean test jacoco:report
 
-> Note: You can add your own methods to existing services, as well as create additional services.
+# View coverage report
+open target/site/jacoco/index.html
 
-#### OrderService
+# Run integration tests
+mvn verify -P integration-tests
+```
 
-* `getAllOrdersByClient(email: String)`
-  Retrieves a list of all orders by client's email placed in the system.
-* `getAllOrdersByEmployee(email: String)`
-  Retrieves a list of all orders by employee's email placed in the system.
-* `addOrder(order: OrderDTO)`
-  Adds a new order to the system, incorporating the provided order details.
+## 📊 Monitoring
 
-#### EmployeeService
+### Actuator Endpoints
+- Health: `http://localhost:8080/actuator/health`
+- Metrics: `http://localhost:8080/actuator/metrics`
+- Prometheus: `http://localhost:8080/actuator/prometheus`
 
-* `getAllEmployees()`
-  Retrieves a list of all employees registered in the system.
-* `getEmployeeByEmail(email: String)`
-  Fetches details of a specific employee based on their email.
-* `updateEmployeeByEmail(email: String, employee: EmployeeDTO)`
-  Updates the information of an existing employee identified by their email with the provided details.
-* `deleteEmployeeByEmail(email: String)`
-  Removes an employee from the system based on their email.
-* `addEmployee(employee: EmployeeDTO)`
-  Registers a new employee in the system with the provided details.
+## 🔧 Configuration
 
-#### ClientService
+### Application Profiles
+- **dev** - Development with PostgreSQL
+- **test** - Testing with H2 in-memory database
+- **prod** - Production configuration
 
-* `getAllClients()`
-  Retrieves a list of all clients (customers) registered in the system.
-* `getClientByEmail(email: String)`
-  Fetches details of a specific client based on their email.
-* `updateClientByEmail(email: String, client: ClientDTO)`
-  Updates the information of an existing client identified by their email with the provided details.
-* `deleteClientByEmail(email: String)`
-  Removes a client from the system based on their email.
-* `addClient(client: ClientDTO)`
-  Registers a new client in the system with the provided details.
+### Environment Variables
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `SPRING_PROFILES_ACTIVE` | Active profile | dev |
+| `DATABASE_URL` | Database connection URL | jdbc:postgresql://localhost:5432/bookstore |
+| `DB_USERNAME` | Database username | postgres |
+| `DB_PASSWORD` | Database password | postgres |
+| `JWT_SECRET` | JWT signing secret | (see application.yml) |
 
-#### BookService
+## 🚢 Deployment
 
-* `getAllBooks()`
-  Retrieves a list of all books available in the store.
-* `getBookByName(name: String)`
-  Fetches details of a specific book based on its name.
-* `updateBookByName(name: String, book: BookDTO)`
-  Updates the information of an existing book identified by its name with the provided details.
-* `deleteBookByName(name: String)`
-  Removes a book from the system based on its name.
-* `addBook(book: BookDTO)`
-  Adds a new book to the system with the provided details.
+### Docker Deployment
+```bash
+# Build image
+docker build -t bookstore-service:1.0.0 .
 
-## Requirements
+# Run container
+docker run -p 8080:8080 \
+  -e SPRING_PROFILES_ACTIVE=prod \
+  -e DATABASE_URL=jdbc:postgresql://host:5432/bookstore \
+  -e DB_USERNAME=postgres \
+  -e DB_PASSWORD=password \
+  -e JWT_SECRET=your-secret \
+  bookstore-service:1.0.0
+```
 
-Ensure implementation of the following:
+### Production Checklist
+- [ ] Update JWT secret to a strong, random value
+- [ ] Configure production database credentials
+- [ ] Enable HTTPS/TLS
+- [ ] Set up database backups
+- [ ] Configure logging aggregation
+- [ ] Set up monitoring and alerting
+- [ ] Review and adjust rate limiting
+- [ ] Update CORS allowed origins
 
-- `Spring Data JPA` for efficient data management.
--  Incorporate `Spring Security` for robust authentication and authorization.
--  Enable `Internationalization and Localization` to support English and any language you choose.
--  Implement `Validation` for data integrity.
--  Establish `Error handling` for graceful error management.
--  Utilize `DTOs` - data transfer objects structured as illustrated below:
+## 🤝 Contributing
 
-<img src="img/DTO.png" alt="DTO" width="600"/>
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Would be nice
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Consider the following additional features:
+## 📝 License
 
-- Incorporate `Logging` for comprehensive system monitoring.
-- Implement `Pagination and Sorting` for enhanced data presentation.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Recommendations
+## 👤 Author
 
-> Use wrapper classes (like Long, Integer, etc.) instead of primitive types whenever possible.
+**Your Name**
+- GitHub: [@yourusername](https://github.com/yourusername)
+- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+- Email: your.email@example.com
 
-- Utilize `Lombok` for streamlined Java code.
-- Use `ModelMapper` for easy mapping between objects.
-- Utilize `Thymeleaf` for HTML templating.
-- Explore the `test` folder to execute provided test cases for your solution.
-- Refer to the `main\resources\sql` folder for SQL scripts to initialize data.
+## 🙏 Acknowledgments
 
-## Special message
+- Spring Boot team for the excellent framework
+- All contributors who help improve this project
 
-- Make the most of the time available.
-  While we understand you may not cover all the points,
-  aim to accomplish as much as possible within the given duration of 15 hours.
+---
+
+⭐ If you find this project useful, please consider giving it a star!
