@@ -5,6 +5,7 @@ import com.bookstore.security.jwt.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -35,8 +36,10 @@ import java.util.List;
 @RequiredArgsConstructor
 public class SecurityConfig {
 
+    @Lazy
     private final UserDetailsService userDetailsService;
     private final JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
+    @Lazy
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
     @Bean

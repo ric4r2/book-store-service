@@ -1,7 +1,7 @@
 # Book Store Service
 
-[![Build Status](https://github.com/yourusername/book-store-service/workflows/CI/badge.svg)](https://github.com/yourusername/book-store-service/actions)
-[![codecov](https://codecov.io/gh/yourusername/book-store-service/branch/main/graph/badge.svg)](https://codecov.io/gh/yourusername/book-store-service)
+[![Build Status](https://github.com/ric4r2/book-store-service/workflows/CI/badge.svg)](https://github.com/ric4r2/book-store-service/actions)
+[![codecov](https://codecov.io/gh/ric4r2/book-store-service/branch/main/graph/badge.svg)](https://codecov.io/gh/ric4r2/book-store-service)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Java](https://img.shields.io/badge/Java-17-orange.svg)](https://www.oracle.com/java/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.3.0-brightgreen.svg)](https://spring.io/projects/spring-boot)
@@ -42,7 +42,7 @@ A professional, production-ready RESTful API for book store management built wit
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/book-store-service.git
+git clone https://github.com/ric4r2/book-store-service.git
 cd book-store-service
 
 # Start the application with Docker Compose
