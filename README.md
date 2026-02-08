@@ -128,26 +128,64 @@ curl -X POST http://localhost:8080/api/v1/books \
   }'
 ```
 
+### Database Initialization
+
+After starting the application for the first time, you need to initialize the database with default users and sample books:
+
+```bash
+# Initialize database with sample data
+Get-Content src/main/resources/db/init-data.sql | docker exec -i bookstore-postgres psql -U postgres -d bookstore
+```
+
+This creates:
+- **1 Admin User** (EMPLOYEE role - can manage books)
+- **2 Client Users** (CLIENT role - can browse and order)
+- **6 Sample Books** (classics and popular titles)
+
 ### Default Users
 
-The application comes with pre-configured users for testing:
+After running the initialization script, you can login with these accounts:
 
-| Email | Password | Role |
-|-------|----------|------|
-| admin@bookstore.com | password123 | EMPLOYEE |
-| employee1@bookstore.com | password123 | EMPLOYEE |
-| client1@example.com | password123 | CLIENT |
-| client2@example.com | password123 | CLIENT |
+| Email | Password | Role | Permissions |
+|-------|----------|------|-------------|
+| admin@bookstore.com | password123 | EMPLOYEE | Create/Update/Delete books, View orders |
+| john@example.com | password123 | CLIENT | Browse books, Create orders |
+| jane@example.com | password123 | CLIENT | Browse books, Create orders |
+
+> **Note**: Change these passwords in production! The BCrypt hashes in `init-data.sql` are for development only.
+
+### Authentication Flow
+
+This API uses **JWT (JSON Web Token)** authentication:
+
+1. **Register** or **Login** to get an access token
+2. **Include the token** in the `Authorization` header for protected endpoints
+3. **Token expires** in 15 minutes (use refresh token to get a new one)
+
+**Example**:
+```bash
+# 1. Login
+curl -X POST http://localhost:8080/api/v1/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"admin@bookstore.com","password":"password123"}'
+
+# Response includes accessToken
+# {"success":true,"data":{"accessToken":"eyJhbGc...","role":"EMPLOYEE"}}
+
+# 2. Use token to access protected endpoints
+curl -X GET http://localhost:8080/api/v1/books \
+  -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
+```
 
 ## Architecture
 
 ### Technology Stack
 - **Framework**: Spring Boot 3.3.0
 - **Language**: Java 17
-- **Database**: PostgreSQL (production), H2 (testing)
+- **Database**: PostgreSQL 16
 - **ORM**: Spring Data JPA with Hibernate
 - **Security**: Spring Security with JWT
-- **Migration**: Flyway
+- **Schema Management**: JPA (Hibernate DDL)
 - **Caching**: Caffeine
 - **API Docs**: SpringDoc OpenAPI 3
 - **Build Tool**: Maven
