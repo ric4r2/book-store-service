@@ -21,9 +21,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * Service for book operations.
- */
 @Service
 @RequiredArgsConstructor
 @Slf4j
@@ -32,9 +29,6 @@ public class BookService {
     private final BookRepository bookRepository;
     private final ModelMapper modelMapper;
 
-    /**
-     * Get all books.
-     */
     @Transactional(readOnly = true)
     @Cacheable(value = "books", key = "'all'")
     public List<BookResponse> getAllBooks() {
@@ -45,9 +39,6 @@ public class BookService {
                 .collect(Collectors.toList());
     }
 
-    /**
-     * Get books with pagination and search.
-     */
     @Transactional(readOnly = true)
     public Page<BookResponse> getBooks(String search, int page, int size, String sortBy, String sortDirection) {
         log.debug("Fetching books with search: '{}', page: {}, size: {}", search, page, size);
@@ -59,9 +50,6 @@ public class BookService {
         return bookPage.map(book -> modelMapper.map(book, BookResponse.class));
     }
 
-    /**
-     * Get book by name.
-     */
     @Transactional(readOnly = true)
     @Cacheable(value = "books", key = "#name")
     public BookResponse getBookByName(String name) {
@@ -71,9 +59,6 @@ public class BookService {
         return modelMapper.map(book, BookResponse.class);
     }
 
-    /**
-     * Create a new book.
-     */
     @Transactional
     @CacheEvict(value = "books", allEntries = true)
     public BookResponse createBook(BookRequest bookRequest) {
@@ -90,9 +75,6 @@ public class BookService {
         return modelMapper.map(book, BookResponse.class);
     }
 
-    /**
-     * Update an existing book.
-     */
     @Transactional
     @CacheEvict(value = "books", allEntries = true)
     public BookResponse updateBook(String name, BookRequest bookRequest) {
@@ -112,9 +94,6 @@ public class BookService {
         return modelMapper.map(book, BookResponse.class);
     }
 
-    /**
-     * Delete a book (soft delete).
-     */
     @Transactional
     @CacheEvict(value = "books", allEntries = true)
     public void deleteBook(String name) {

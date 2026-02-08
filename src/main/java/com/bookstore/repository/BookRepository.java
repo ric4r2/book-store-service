@@ -24,10 +24,10 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     @Query("SELECT b FROM Book b WHERE b.deletedAt IS NULL")
     List<Book> findAllActive();
 
-    @Query("SELECT b FROM Book b WHERE b.deletedAt IS NULL AND " +
-            "(:search IS NULL OR :search = '' OR " +
-            "LOWER(b.name) LIKE LOWER(CONCAT('%', :search, '%')) OR " +
-            "LOWER(b.author) LIKE LOWER(CONCAT('%', :search, '%')) OR " +
-            "LOWER(b.genre) LIKE LOWER(CONCAT('%', :search, '%')))")
+    @Query("SELECT b FROM Book b WHERE b.deletedAt IS NULL AND "
+            + "(:search IS NULL OR :search = '' OR "
+            + "LOWER(b.name) LIKE LOWER(CONCAT('%', :search, '%')) OR "
+            + "LOWER(b.author) LIKE LOWER(CONCAT('%', :search, '%')) OR "
+            + "LOWER(b.genre) LIKE LOWER(CONCAT('%', :search, '%')))")
     Page<Book> findBooksWithSearch(@Param("search") String search, Pageable pageable);
 }

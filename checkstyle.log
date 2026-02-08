@@ -1,0 +1,160 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.bookstore:book-store-service >------------------
+[INFO] Building Book Store Service 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- checkstyle:3.3.1:check (default-cli) @ book-store-service ---
+[INFO] Starting audit...
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\config\OpenApiConfig.java:27:20: Abbreviation in name 'customOpenAPI' must contain no more than '1' consecutive capital letters. [AbbreviationAsWordInName]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\AuthController.java:36: Line is longer than 120 characters (found 205). [LineLength]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\AuthController.java:36:13: 'annotation array initialization' child has incorrect indentation level 12, expected level should be 8. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\AuthController.java:37: Line is longer than 120 characters (found 123). [LineLength]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\AuthController.java:37:13: 'annotation array initialization' child has incorrect indentation level 12, expected level should be 8. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\AuthController.java:47: Line is longer than 120 characters (found 202). [LineLength]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\AuthController.java:47:13: 'annotation array initialization' child has incorrect indentation level 12, expected level should be 8. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\AuthController.java:48: Line is longer than 120 characters (found 124). [LineLength]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\AuthController.java:48:13: 'annotation array initialization' child has incorrect indentation level 12, expected level should be 8. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:39:9: 'member def modifier' has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:41:9: 'method def modifier' has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:43: Line is longer than 120 characters (found 219). [LineLength]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:43:25: 'annotation array initialization' child has incorrect indentation level 24, expected level should be 12. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:47:17: 'method def' child has incorrect indentation level 16, expected level should be 8. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:48:17: 'method def' child has incorrect indentation level 16, expected level should be 8. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:49:9: 'method def rcurly' has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:51:9: 'method def modifier' has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:58: Line is longer than 120 characters (found 126). [LineLength]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:59:17: 'method def' child has incorrect indentation level 16, expected level should be 8. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:60:17: 'method def' child has incorrect indentation level 16, expected level should be 8. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:61:9: 'method def rcurly' has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:63:9: 'method def modifier' has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:65: Line is longer than 120 characters (found 144). [LineLength]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:65:25: 'annotation array initialization' child has incorrect indentation level 24, expected level should be 12. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:66: Line is longer than 120 characters (found 130). [LineLength]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:66:25: 'annotation array initialization' child has incorrect indentation level 24, expected level should be 12. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:71:17: 'method def' child has incorrect indentation level 16, expected level should be 8. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:72:17: 'method def' child has incorrect indentation level 16, expected level should be 8. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:73:9: 'method def rcurly' has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:75:9: 'method def modifier' has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:77: Line is longer than 120 characters (found 142). [LineLength]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:77:25: 'annotation array initialization' child has incorrect indentation level 24, expected level should be 12. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:78: Line is longer than 120 characters (found 136). [LineLength]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:78:25: 'annotation array initialization' child has incorrect indentation level 24, expected level should be 12. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:79: Line is longer than 120 characters (found 129). [LineLength]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:79:25: 'annotation array initialization' child has incorrect indentation level 24, expected level should be 12. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:84:17: 'method def' child has incorrect indentation level 16, expected level should be 8. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:85:17: 'method def' child has incorrect indentation level 16, expected level should be 8. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:87:9: 'method def rcurly' has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:89:9: 'method def modifier' has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:91: Line is longer than 120 characters (found 142). [LineLength]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:91:25: 'annotation array initialization' child has incorrect indentation level 24, expected level should be 12. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:92: Line is longer than 120 characters (found 131). [LineLength]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:92:25: 'annotation array initialization' child has incorrect indentation level 24, expected level should be 12. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:93: Line is longer than 120 characters (found 129). [LineLength]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:93:25: 'annotation array initialization' child has incorrect indentation level 24, expected level should be 12. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:100:17: 'method def' child has incorrect indentation level 16, expected level should be 8. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:101:17: 'method def' child has incorrect indentation level 16, expected level should be 8. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:102:9: 'method def rcurly' has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:104:9: 'method def modifier' has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:106: Line is longer than 120 characters (found 142). [LineLength]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:106:25: 'annotation array initialization' child has incorrect indentation level 24, expected level should be 12. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:107: Line is longer than 120 characters (found 131). [LineLength]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:107:25: 'annotation array initialization' child has incorrect indentation level 24, expected level should be 12. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:108: Line is longer than 120 characters (found 129). [LineLength]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:108:25: 'annotation array initialization' child has incorrect indentation level 24, expected level should be 12. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:114:17: 'method def' child has incorrect indentation level 16, expected level should be 8. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:115:17: 'method def' child has incorrect indentation level 16, expected level should be 8. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\controller\BookController.java:116:9: 'method def rcurly' has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\model\Book.java:25:9: 'annotation array initialization' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\model\Book.java:26:9: 'annotation array initialization' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\model\Book.java:27:9: 'annotation array initialization' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\model\BookItem.java:23:9: 'annotation array initialization' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\model\BookItem.java:24:9: 'annotation array initialization' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\model\Order.java:31:9: 'annotation array initialization' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\model\Order.java:32:9: 'annotation array initialization' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\model\Order.java:33:9: 'annotation array initialization' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\model\Order.java:34:9: 'annotation array initialization' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\model\RefreshToken.java:26:9: 'annotation array initialization' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\model\RefreshToken.java:27:9: 'annotation array initialization' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\RicardoCruz\Downloads\RICHIE\Code\Projects\book-store-service\src\main\java\com\bookstore\model\RefreshToken.java:28:9: 'annotation array initialization' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+Audit done.
+[WARNING] src\main\java\com\bookstore\config\OpenApiConfig.java:[27,20] (naming) AbbreviationAsWordInName: Abbreviation in name 'customOpenAPI' must contain no more than '1' consecutive capital letters.
+[WARNING] src\main\java\com\bookstore\controller\AuthController.java:[36] (sizes) LineLength: Line is longer than 120 characters (found 205).
+[WARNING] src\main\java\com\bookstore\controller\AuthController.java:[36,13] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 12, expected level should be 8.
+[WARNING] src\main\java\com\bookstore\controller\AuthController.java:[37] (sizes) LineLength: Line is longer than 120 characters (found 123).
+[WARNING] src\main\java\com\bookstore\controller\AuthController.java:[37,13] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 12, expected level should be 8.
+[WARNING] src\main\java\com\bookstore\controller\AuthController.java:[47] (sizes) LineLength: Line is longer than 120 characters (found 202).
+[WARNING] src\main\java\com\bookstore\controller\AuthController.java:[47,13] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 12, expected level should be 8.
+[WARNING] src\main\java\com\bookstore\controller\AuthController.java:[48] (sizes) LineLength: Line is longer than 120 characters (found 124).
+[WARNING] src\main\java\com\bookstore\controller\AuthController.java:[48,13] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 12, expected level should be 8.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[39,9] (indentation) Indentation: 'member def modifier' has incorrect indentation level 8, expected level should be 4.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[41,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[43] (sizes) LineLength: Line is longer than 120 characters (found 219).
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[43,25] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 24, expected level should be 12.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[47,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[48,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[49,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[51,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[58] (sizes) LineLength: Line is longer than 120 characters (found 126).
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[59,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[60,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[61,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[63,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[65] (sizes) LineLength: Line is longer than 120 characters (found 144).
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[65,25] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 24, expected level should be 12.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[66] (sizes) LineLength: Line is longer than 120 characters (found 130).
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[66,25] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 24, expected level should be 12.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[71,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[72,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[73,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[75,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[77] (sizes) LineLength: Line is longer than 120 characters (found 142).
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[77,25] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 24, expected level should be 12.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[78] (sizes) LineLength: Line is longer than 120 characters (found 136).
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[78,25] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 24, expected level should be 12.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[79] (sizes) LineLength: Line is longer than 120 characters (found 129).
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[79,25] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 24, expected level should be 12.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[84,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[85,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[87,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[89,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[91] (sizes) LineLength: Line is longer than 120 characters (found 142).
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[91,25] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 24, expected level should be 12.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[92] (sizes) LineLength: Line is longer than 120 characters (found 131).
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[92,25] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 24, expected level should be 12.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[93] (sizes) LineLength: Line is longer than 120 characters (found 129).
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[93,25] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 24, expected level should be 12.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[100,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[101,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[102,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[104,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[106] (sizes) LineLength: Line is longer than 120 characters (found 142).
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[106,25] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 24, expected level should be 12.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[107] (sizes) LineLength: Line is longer than 120 characters (found 131).
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[107,25] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 24, expected level should be 12.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[108] (sizes) LineLength: Line is longer than 120 characters (found 129).
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[108,25] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 24, expected level should be 12.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[114,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[115,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+[WARNING] src\main\java\com\bookstore\controller\BookController.java:[116,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+[WARNING] src\main\java\com\bookstore\model\Book.java:[25,9] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 8, expected level should be 4.
+[WARNING] src\main\java\com\bookstore\model\Book.java:[26,9] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 8, expected level should be 4.
+[WARNING] src\main\java\com\bookstore\model\Book.java:[27,9] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 8, expected level should be 4.
+[WARNING] src\main\java\com\bookstore\model\BookItem.java:[23,9] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 8, expected level should be 4.
+[WARNING] src\main\java\com\bookstore\model\BookItem.java:[24,9] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 8, expected level should be 4.
+[WARNING] src\main\java\com\bookstore\model\Order.java:[31,9] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 8, expected level should be 4.
+[WARNING] src\main\java\com\bookstore\model\Order.java:[32,9] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 8, expected level should be 4.
+[WARNING] src\main\java\com\bookstore\model\Order.java:[33,9] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 8, expected level should be 4.
+[WARNING] src\main\java\com\bookstore\model\Order.java:[34,9] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 8, expected level should be 4.
+[WARNING] src\main\java\com\bookstore\model\RefreshToken.java:[26,9] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 8, expected level should be 4.
+[WARNING] src\main\java\com\bookstore\model\RefreshToken.java:[27,9] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 8, expected level should be 4.
+[WARNING] src\main\java\com\bookstore\model\RefreshToken.java:[28,9] (indentation) Indentation: 'annotation array initialization' child has incorrect indentation level 8, expected level should be 4.
+[WARNING] checkstyle:check violations detected but failOnViolation set to false
+[INFO] You have 71 Checkstyle violations.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.094 s
+[INFO] Finished at: 2026-02-07T20:13:46-06:00
+[INFO] ------------------------------------------------------------------------

@@ -36,9 +36,6 @@ public class AuthService {
     private final JwtTokenProvider tokenProvider;
     private final RefreshTokenService refreshTokenService;
 
-    /**
-     * Authenticate user and generate JWT tokens.
-     */
     @Transactional
     public JwtResponse login(LoginRequest loginRequest) {
         Authentication authentication = authenticationManager.authenticate(
@@ -61,9 +58,6 @@ public class AuthService {
                 user.getUserType().name());
     }
 
-    /**
-     * Register a new client.
-     */
     @Transactional
     public JwtResponse register(RegisterRequest registerRequest) {
         if (userRepository.existsByEmail(registerRequest.getEmail())) {
@@ -98,9 +92,6 @@ public class AuthService {
                 client.getUserType().name());
     }
 
-    /**
-     * Refresh access token using refresh token.
-     */
     @Transactional
     public JwtResponse refreshToken(String refreshTokenStr) {
         return refreshTokenService.findByToken(refreshTokenStr)
@@ -117,9 +108,6 @@ public class AuthService {
                 .orElseThrow(() -> new RuntimeException("Refresh token not found"));
     }
 
-    /**
-     * Logout user by deleting refresh token.
-     */
     @Transactional
     public void logout(String refreshToken) {
         refreshTokenService.deleteByToken(refreshToken);

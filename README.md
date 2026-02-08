@@ -1,4 +1,4 @@
-# 📚 Book Store Service
+# Book Store Service
 
 [![Build Status](https://github.com/yourusername/book-store-service/workflows/CI/badge.svg)](https://github.com/yourusername/book-store-service/actions)
 [![codecov](https://codecov.io/gh/yourusername/book-store-service/branch/main/graph/badge.svg)](https://codecov.io/gh/yourusername/book-store-service)
@@ -8,13 +8,13 @@
 
 A professional, production-ready RESTful API for book store management built with Spring Boot 3, featuring JWT authentication, comprehensive API documentation, and modern DevOps practices.
 
-## ✨ Features
+## Features
 
 ### Core Functionality
-- 📖 **Book Management** - CRUD operations for books with search and pagination
-- 👥 **User Management** - Separate client and employee roles with role-based access control
-- 🛒 **Order Management** - Complete order processing workflow
-- 🔐 **JWT Authentication** - Secure token-based authentication with refresh tokens
+- **Book Management** - CRUD operations for books with search and pagination
+- **User Management** - Separate client and employee roles with role-based access control
+- **Order Management** - Complete order processing workflow
+- **JWT Authentication** - Secure token-based authentication with refresh tokens
 
 ### Technical Highlights
 - **RESTful API** - Clean, versioned API design (`/api/v1/`)
@@ -30,7 +30,7 @@ A professional, production-ready RESTful API for book store management built wit
 - **Docker Support** - Multi-stage Dockerfile and docker-compose for easy deployment
 - **CI/CD** - GitHub Actions pipeline for automated testing and quality checks
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Java 17 or higher
@@ -74,7 +74,7 @@ mvn spring-boot:run
 
 The application will start on `http://localhost:8080`
 
-## 📖 API Documentation
+## API Documentation
 
 ### Swagger UI
 Access the interactive API documentation at: **http://localhost:8080/swagger-ui.html**
@@ -139,7 +139,7 @@ The application comes with pre-configured users for testing:
 | client1@example.com | password123 | CLIENT |
 | client2@example.com | password123 | CLIENT |
 
-## 🏗️ Architecture
+## Architecture
 
 ### Technology Stack
 - **Framework**: Spring Boot 3.3.0
@@ -179,7 +179,7 @@ src/main/java/com/bookstore/
 └── service/             # Business logic
 ```
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Run all tests
@@ -195,14 +195,14 @@ open target/site/jacoco/index.html
 mvn verify -P integration-tests
 ```
 
-## 📊 Monitoring
+## Monitoring
 
 ### Actuator Endpoints
 - Health: `http://localhost:8080/actuator/health`
 - Metrics: `http://localhost:8080/actuator/metrics`
 - Prometheus: `http://localhost:8080/actuator/prometheus`
 
-## 🔧 Configuration
+## Configuration
 
 ### Application Profiles
 - **dev** - Development with PostgreSQL
@@ -218,7 +218,7 @@ mvn verify -P integration-tests
 | `DB_PASSWORD` | Database password | postgres |
 | `JWT_SECRET` | JWT signing secret | (see application.yml) |
 
-## 🚢 Deployment
+## Deployment
 
 ### Docker Deployment
 ```bash
@@ -245,7 +245,7 @@ docker run -p 8080:8080 \
 - [ ] Review and adjust rate limiting
 - [ ] Update CORS allowed origins
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -255,22 +255,22 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👤 Author
+## Author
 
 **Your Name**
 - GitHub: [@yourusername](https://github.com/yourusername)
 - LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
 - Email: your.email@example.com
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Spring Boot team for the excellent framework
 - All contributors who help improve this project
 
 ---
 
-⭐ If you find this project useful, please consider giving it a star!
+If you find this project useful, please consider giving it a star!
