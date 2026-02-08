@@ -261,10 +261,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Author
 
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- Email: your.email@example.com
+**Ricardo Cruz**
+- GitHub: [@ric4r2](https://github.com/ric4r2)
+- LinkedIn: [José Ricardo Cruz Tapia](https://www.linkedin.com/in/jos%C3%A9-ricardo-cruz-tapia/)
+- Email: ric4r2.0201@gmail.com
 
 ## Acknowledgments
 
